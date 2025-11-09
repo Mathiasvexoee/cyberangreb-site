@@ -34,11 +34,11 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <h1>INDBERET DIT CYBERATTACK</h1>
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h2>Hacket?!? Fortæl mig alt!</h2>
+          <!-- <p>Tekst</p> -->
         </article>
         <form id="webform">
           <fieldset>
@@ -70,7 +70,7 @@
           <fieldset>
             <legend>Hackeren</legend>
             <p>Er du blevet hacket, eller har du begået angrebet?</p>
-            <label for="ja"> <input type="radio" id="ja" name="hackeren" value="ja" />Ja, jeg kom til at hacke </label>
+            <label for="ja"> <input type="radio" id="ja" name="hackeren" value="ja" required />Ja, jeg kom til at hacke </label>
             <label for="nej"> <input type="radio" id="nej" name="hackeren" value="nej" />Nej, hjælp! </label>
             <label for="måske"> <input type="radio" id="måske" name="hackeren" value="måske" />Måske? </label>
             <p class="error-message">Please enter a value</p>
@@ -78,8 +78,8 @@
           <fieldset>
             <legend>Angrebstype</legend>
             <label for="angreb">Hvordan er du blevet angrebet?</label>
-            <select name="angreb" id="angreb">
-              <option value=" "></option>
+            <select name="angreb" id="angreb" required>
+              <option value=""></option>
               <option value="e-mail-link">E-mail link</option>
               <option value="USB">USB stik</option>
               <option value="wifi">Offentligt internet</option>
@@ -88,39 +88,38 @@
             <p class="error-message">Please enter a value</p>
             <div class="form-group">
               <label for="beskriv">Beskriv dit angreb</label>
-              <textarea name="beskriv" id="beskriv" rows="4" placeholder="Beskriv kort din episode"></textarea>
+              <textarea name="beskriv" id="beskriv" rows="4" placeholder="Beskriv kort din episode" required></textarea>
               <p class="error-message">Please enter a value</p>
             </div>
           </fieldset>
           <fieldset>
             <legend>Genopretning</legend>
             <div class="form-group">
-              <p class="form-group2">Har du en backup?</p>
-              <label for="offline"> <input type="checkbox" name="backup" id="offline" value="offline" />Ja, offline (Thank God!) </label>
+              <p>Har du en backup?</p>
+              <label for="offline"> <input type="checkbox" name="backup" id="offline" value="offline" required />Ja, offline (Thank God!) </label>
               <label for="sky"> <input type="checkbox" name="backup" id="sky" value="sky" />Ja, i skyen (Modigt?) </label>
               <label for="rip"> <input type="checkbox" name="backup" id="rip" value="rip" />Nej (R.I.P) </label>
               <p class="error-message">Please enter a value</p>
             </div>
             <div class="form-group">
               <p class="form-group2">Hvad har du gjort?</p>
-              <label for="stik"> <input type="checkbox" name="action" id="stik" value="stik" />Trak stikket </label>
+              <label for="stik"> <input type="checkbox" name="action" id="stik" value="stik" required />Trak stikket </label>
               <label for="mail"> <input type="checkbox" name="action" id="mail" value="mail" />Sendte en mail til min hacker </label>
               <label for="penge"> <input type="checkbox" name="action" id="penge" value="penge" />Betalte løsesum </label>
               <p class="error-message">Please enter a value</p>
             </div>
           </fieldset>
-          <label for="terms">
-            <input type="checkbox" id="terms" name="accept_terms" value="yes" required />
-            Accepter betingelser
-          </label>
+          <div class="form-group">
+            <label for="terms">
+              <input type="checkbox" id="terms" name="accept_terms" value="yes" required />
+              Accepter betingelser
+            </label>
+          </div>
           <button id="indberet">Indberet (og få virtuelt kram)</button>
         </form>
       </section>
       <section id="form-summary">
         <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
-        </article>
         <section>
           <p>Fornavn: <span id="firstname-output"></span></p>
           <p>Efternavn: <span id="lastname-output"></span></p>
@@ -129,6 +128,8 @@
           <p>Hackeren: <span id="hackeren-output"></span></p>
           <p>Angrebstype: <span id="angrebstype-output"></span></p>
           <p>Beskrevet angreb: <span id="beskrevet-output"></span></p>
+          <p>Backup: <span id="backup-output"></span></p>
+          <p>Handling: <span id="handling-output"></span></p>
         </section>
       </section>
     </main>
