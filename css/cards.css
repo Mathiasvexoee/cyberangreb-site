@@ -81,8 +81,21 @@
   width: max-content;
   border-radius: var(--border-radius);
 }
+
+.luk_btn {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  color: var(--color-text-inverted);
+  text-decoration: none;
+  width: max-content;
+  border-radius: var(--border-radius);
+  background-color: var(--color-cta-newscard-bg);
+  border: none;
+}
+
 .news_card .cta_btn {
   background-color: var(--color-cta-newscard-bg);
+  border: none;
 }
 .news_card:nth-of-type(2n) .cta_btn {
   background-color: var(--color-cta-newscard-bg-inverted);
@@ -91,4 +104,91 @@
 .cta_btn:after {
   content: "\2192";
   margin-left: 1rem;
+}
+
+[popover] {
+  padding: 1rem;
+  margin: auto;
+  max-height: 90vh;
+  max-width: 50ch;
+  width: 90vw;
+  border: none;
+
+  button {
+    position: sticky;
+    top: 0;
+    justify-self: end;
+  }
+
+  &:popover-open {
+    display: grid;
+    border-radius: 37px;
+    scrollbar-width: none;
+  }
+
+  &::backdrop {
+    background: #0008;
+  }
+  h4 {
+    font-size: var(--font-h3-size);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-headline-text-page);
+    line-height: 1.2;
+    background-color: var(--color-head-bg);
+    margin: 40px 0 20px -0.5em;
+    padding: 15px 30px;
+    border-radius: 0 37px 37px 0;
+  }
+  .scroll_btn {
+    position: sticky;
+    bottom: 1rem;
+    justify-self: center;
+    cursor: pointer;
+    padding: 0.4rem 1rem;
+    color: var(--color-text-inverted);
+    text-decoration: none;
+    width: max-content;
+    border-radius: var(--border-radius);
+    background-color: var(--color-cta-newscard-bg);
+    border: none;
+  }
+}
+
+[popover] {
+  opacity: 0;
+  translate: 0 -50%;
+  transition: 0.5s allow-discrete;
+  border-radius: 37px;
+  scrollbar-width: none;
+}
+
+[popover]:popover-open {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@starting-style {
+  [popover]:popover-open {
+    opacity: 0;
+    translate: 0 50%;
+  }
+}
+
+::backdrop {
+  opacity: 0;
+  transition: 0.5s allow-discrete;
+  background: #0008;
+  backdrop-filter: blur(5px);
+}
+
+:popover-open::backdrop {
+  opacity: 1;
+  backdrop-filter: blur(5px);
+}
+
+@starting-style {
+  :popover-open::backdrop {
+    opacity: 0;
+    backdrop-filter: blur(5px);
+  }
 }
