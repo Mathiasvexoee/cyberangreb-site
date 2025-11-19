@@ -1,13 +1,14 @@
 :root {
+  color-scheme: light;
   /* Colours */
-  --color-bg: #fceb94; /* page background /*
+  --color-bg: light-dark(#fceb94, #707070); /* page background /*
 
   /* Header */
   --color-head-bg: #ff4b00;
 
   /* Logotype */
   --color-logotype-bg: #000000;
-  --color-text-logotype: #fffae2;
+  --color-text-logotype: #000000;
   --font-logotype-size: 40px;
 
   /* Global menu */
@@ -23,12 +24,12 @@
   --font-sub1-size: 34px;
   --font-h2-size: 30px;
   --font-h3-size: 24px;
-  --color-headline-bg: #000000;
-  --color-headline-text-page: #fffae2;
+  --color-headline-bg: light-dark(#000000, #fffae2);
+  --color-headline-text-page: light-dark(#fffae2, #272727);
 
   /* Tekst */
-  --color-text: #000000;
-  --color-text-inverted: #fffae2;
+  --color-text: light-dark(#000000, #fffae2);
+  --color-text-inverted: light-dark(#fffae2, #272727);
 
   /*  Marginer */
   --margin-head-bottom: 20px;
@@ -37,11 +38,12 @@
   --border-radius: 37px;
 
   /* Cards */
-  --color-card-bg: #ffffff;
+  --color-card-bg: light-dark(#ffffff, #272727);
   --color-cta-card-bg: #ff4b00;
   /* news-cards */
-  --color-news-bg: #fffae2;
-  --color-news-bg-inverted: #dbe2f5;
+  --color-news-bg: light-dark(#fffae2, #494949);
+  --color-forms: light-dark(#dbe2f5, #707070);
+  --color-news-bg-inverted: light-dark(#dbe2f5, #272727);
   --color-cta-newscard-bg: #ffa680;
   --color-cta-newscard-bg-inverted: #6f90eb;
 
@@ -66,4 +68,7 @@
   --color-info-bg: #ffffff;
   --color-infobox-1-bg: #def5db;
   --color-infobox-2-bg: #ffa680;
+}
+:root.dark {
+  color-scheme: dark;
 }

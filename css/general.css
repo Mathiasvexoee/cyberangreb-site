@@ -36,7 +36,7 @@ main section {
 h1 {
   font-size: var(--font-h1-size);
   font-weight: var(--font-weight-bold);
-  color: var(--color-text-inverted);
+  color: var(--color-link-bg);
   line-height: 1;
   text-align: left;
 }
@@ -67,7 +67,7 @@ button {
 .sub {
   font-size: var(--font-sub1-size);
   font-weight: var(--font-weight-light);
-  color: var(--color-text-inverted);
+  color: var(--color-link-bg);
 }
 
 h2 {
@@ -122,7 +122,7 @@ nav a {
 header nav li a {
   margin: 1.5rem;
   background-color: var(--color-link-bg);
-  color: var(--color-text);
+  color: var(--color-text-logotype);
   font-size: var(--followup-text-size);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius-links);
@@ -145,4 +145,40 @@ nav li a:active {
 /* FOOTER */
 footer a {
   font-size: 0.7rem;
+}
+
+/* Light and dark mode toggle */
+.toggle {
+  width: 56px;
+  height: 32px;
+  padding: 0;
+  flex: 0 0 auto;
+  background: #9be28c; /* Light mode */
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.toggle::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: white;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Active (dark mode) */
+.toggle.active {
+  background: #8c9be2;
+}
+
+.toggle.active::after {
+  transform: translateX(24px);
+  background: #333;
 }

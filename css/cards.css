@@ -69,9 +69,6 @@
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
-.news_card .cta_btn {
-  justify-self: center;
-}
 .cta_btn {
   display: inline-block;
   padding: 0.4rem 1rem;
@@ -94,12 +91,13 @@
 }
 
 .news_card .cta_btn {
+  justify-self: center;
+  color: var(--color-text-logotype);
   background-color: var(--color-cta-newscard-bg);
   border: none;
 }
 .news_card:nth-of-type(2n) .cta_btn {
   background-color: var(--color-cta-newscard-bg-inverted);
-  color: var(--color-text);
 }
 .cta_btn:after {
   content: "\2192";
@@ -124,6 +122,7 @@
     display: grid;
     border-radius: 37px;
     scrollbar-width: none;
+    color: var(--color-card-bg);
   }
 
   &::backdrop {
@@ -132,12 +131,15 @@
   h4 {
     font-size: var(--font-h3-size);
     font-weight: var(--font-weight-bold);
-    color: var(--color-headline-text-page);
+    color: var(--color-link-bg);
     line-height: 1.2;
     background-color: var(--color-head-bg);
     margin: 10px 0 20px -1.2em;
     padding: 15px 30px;
     border-radius: 0 37px 37px 0;
+  }
+  p {
+    color: var(--color-text);
   }
   p:first-of-type {
     font-size: var(--bodytext-size);
