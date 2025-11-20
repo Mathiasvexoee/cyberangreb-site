@@ -1,6 +1,7 @@
 :root {
   --transition: 0.3s ease;
 }
+
 body {
   transition: background var(--transition), color var(--transition);
 }
@@ -36,12 +37,16 @@ nav form {
   -webkit-appearance: none;
   appearance: none;
   -webkit-tap-highlight-color: transparent;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.3, 1.6, 0.7, 1), background 0.3s cubic-bezier(0.3, 1.6, 0.7, 1);
 }
+
 .toggle:checked {
   background: #707070;
   color: #000000;
 }
-.toggle:after {
+.toggle::after {
+  position: absolute;
   background: #ffffff;
   border-radius: 50%;
   content: "";
@@ -50,9 +55,9 @@ nav form {
   left: 5px;
   width: 26px;
   height: 26px;
-  transition-delay: calc(var(--transition) * 0.75);
-  transition-timing-function: cubic-bezier(0.3, 1.6, 0.7, 1);
+  transition: transform 0.3s cubic-bezier(0.3, 1.6, 0.7, 1), background 0.3s cubic-bezier(0.3, 1.6, 0.7, 1);
 }
+
 .toggle:checked:after {
   background: #000000;
   transition-delay: 0s;

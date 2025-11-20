@@ -1,4 +1,4 @@
-const form = document.querySelector("form");
+const form = document.querySelector("#webform");
 
 const firstNameOutput = document.querySelector("#firstname-output");
 const lastNameOutput = document.querySelector("#lastname-output");
