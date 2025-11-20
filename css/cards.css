@@ -111,6 +111,7 @@
   max-width: 50ch;
   width: 90vw;
   border: none;
+  background-color: var(--color-card-bg);
 
   button {
     position: sticky;
@@ -122,7 +123,7 @@
     display: grid;
     border-radius: 37px;
     scrollbar-width: none;
-    color: var(--color-card-bg);
+    background-color: var(--color-card-bg);
   }
 
   &::backdrop {

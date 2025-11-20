@@ -20,8 +20,8 @@
   --border-radius-links: 37px;
 
   /* Headlines og rubrik */
-  --font-h1-size: 40px;
-  --font-sub1-size: 34px;
+  --font-h1-size: 32px;
+  --font-sub1-size: 26px;
   --font-h2-size: 30px;
   --font-h3-size: 24px;
   --color-headline-bg: light-dark(#000000, #fffae2);
@@ -66,8 +66,8 @@
 
   /* Infographics */
   --color-info-bg: #ffffff;
-  --color-infobox-1-bg: #def5db;
-  --color-infobox-2-bg: #ffa680;
+  --color-infobox-1-bg: light-dark(#def5db, #586556);
+  --color-infobox-2-bg: light-dark(#ffa680, #7a5748);
 }
 :root.dark {
   color-scheme: dark;
