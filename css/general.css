@@ -111,8 +111,10 @@ nav a {
   width: max-content;
 }
 
-#logotype-wrapper > a {
-  margin: 0.2rem 0 0.2rem 1rem;
+#logotype-wrapper a img {
+  display: block;
+  height: 3rem;
+  margin-left: 0.5rem;
 }
 
 /* Global menu */
