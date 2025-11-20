@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/darkmode.css" />
     <link rel="icon" type="images/svg+xml" href="img/favicon.svg" />
     <title>Emergency Site</title>
   </head>
@@ -20,9 +21,13 @@
         <div id="logotype-wrapper" class="logo">
           <a href="index.html"><img src="img/Logo_hvid.svg" alt="Logo" /></a>
         </div>
-        <button class="toggle" id="toggle"></button>
+        <form>
+          <input id="dark-mode" class="toggle" type="checkbox" />
+          <span class="toggle-text">Light</span>
+          <label for="dark-mode" class="sr">Theme toggle</label>
+        </form>
         <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
+          <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
           <li><a class="menuItem" href="register.html">Indberet</a></li>
         </ul>
         <button class="burger">
