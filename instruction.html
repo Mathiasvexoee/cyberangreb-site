@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
     <link rel="stylesheet" href="css/infographic.css" />
+    <link rel="stylesheet" href="css/darkmode.css" />
     <link rel="icon" type="images/svg+xml" href="img/favicon.svg" />
     <title>Emergency Site</title>
   </head>
@@ -21,11 +22,15 @@
         <div id="logotype-wrapper" class="logo">
           <a href="index.html"><img src="img/Logo_hvid.svg" alt="Logo" /></a>
         </div>
+        <form>
+          <input id="dark-mode" class="toggle" type="checkbox" />
+          <span class="toggle-text">Light</span>
+          <label for="dark-mode" class="sr">Theme toggle</label>
+        </form>
         <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
+          <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
           <li><a class="menuItem" href="register.html">Indberet</a></li>
         </ul>
-        <button id="toggle">Light/Dark mode</button>
         <button class="burger">
           <span class="line"></span>
           <span class="line"></span>
@@ -33,7 +38,6 @@
         </button>
       </nav>
     </header>
-
     <main>
       <h1>Angreb på dit privatliv!</h1>
       <p id="survival">3 overlevelses-strategier hvis du udsættes for dit første cyberangreb!</p>

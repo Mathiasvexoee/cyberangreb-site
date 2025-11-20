@@ -1,0 +1,84 @@
+:root {
+  --transition: 0.3s ease;
+}
+body {
+  transition: background var(--transition), color var(--transition);
+}
+.theme-toggle {
+  display: inline-block;
+}
+nav form {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.5em;
+  margin-right: auto;
+}
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.toggle {
+  background: #ff4b00;
+  color: #ffffff;
+  border-radius: 36px;
+  cursor: pointer;
+  width: 6em;
+  height: 36px;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.toggle:checked {
+  background: #707070;
+  color: #000000;
+}
+.toggle:after {
+  background: #ffffff;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  top: 5px;
+  left: 5px;
+  width: 26px;
+  height: 26px;
+  transition-delay: calc(var(--transition) * 0.75);
+  transition-timing-function: cubic-bezier(0.3, 1.6, 0.7, 1);
+}
+.toggle:checked:after {
+  background: #000000;
+  transition-delay: 0s;
+  transform: translateX(3.7em);
+}
+
+.toggle:not(:checked) + .toggle-text {
+  color: #ffffff;
+}
+.toggle:checked + .toggle-text {
+  color: #fff;
+}
+
+.toggle-text {
+  position: absolute;
+  font-size: 1em;
+  font-weight: 600;
+  pointer-events: none;
+  color: #ffffff;
+  width: 3em;
+  text-align: center;
+  transform: translateX(0.75em);
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+.toggle-text.fade-out {
+  opacity: 0;
+}
